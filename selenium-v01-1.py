@@ -106,7 +106,7 @@ class BotMaster:
         self.bots_list = []
         self.bots_auth = {}
         self.summon_bots()
-        self.play_specific_song('lets get it on', [0, 1])
+        self.play_specific_song('lets get it on')
         #self.play_specific_artist ('Fanatic Squirrel', 1)
 
     def summon_bots(self):
