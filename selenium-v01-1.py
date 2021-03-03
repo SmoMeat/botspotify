@@ -12,7 +12,10 @@ class bot:
         self.username = username
         self.password = password
         self.base_url = 'https://open.spotify.com/'
-        self.bot = webdriver.Chrome()
+        options = webdriver.ChromeOptions()
+        options.add_experimental_option("excludeSwitches", ["enable-automation"])
+        options.add_experimental_option('useAutomationExtension', False)
+        self.bot = webdriver.Chrome(options=options)
         self.connect()
 
     def connect(self):
@@ -106,7 +109,7 @@ class BotMaster:
         self.bots_list = []
         self.bots_auth = {}
         self.summon_bots()
-        self.play_specific_song('lets get it on')
+        self.play_specific_song('sexual healing', [1,4])
         #self.play_specific_artist ('Fanatic Squirrel', 1)
 
     def summon_bots(self):
